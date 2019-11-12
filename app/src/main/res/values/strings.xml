@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">User list</string>
     <string name="action_clear">Clear</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="enter_age">Enter age</string>
+    <string name="action_add_user">Add user</string>
+    <string name="error_input_name">Enter name user</string>
+    <string name="error_input_age">Enter age above zero</string>
+    <string name="text_name">Name : %s</string>
+    <string name="text_age">Age : %s</string>
 </resources>

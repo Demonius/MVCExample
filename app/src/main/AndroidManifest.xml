@@ -32,9 +32,15 @@
             android:name="AA_DB_VERSION"
             android:value="1" />
 
-        <meta-data android:name="AA_MODELS"
-            android:value="by.lukashenko.mvc.example.model.db.User"/>ggggghbbygyg
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="by.lukashenko.mvc.example.model.db.User" />
 
+        <provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="by.lukashenko.mvc.example"
+            android:enabled="true"
+            android:exported="false"></provider>
     </application>
 
 </manifest>

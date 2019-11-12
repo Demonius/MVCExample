@@ -40,13 +40,7 @@ class ControllerMainActivity(
 
     private fun setResultData(resultCode: Int, data: Intent?) {
         when (resultCode) {
-            Activity.RESULT_OK -> setResultData(data)
-        }
-    }
-
-    private fun setResultData(data: Intent?) {
-        data?.apply {
-
+            Activity.RESULT_OK -> getData()
         }
     }
 

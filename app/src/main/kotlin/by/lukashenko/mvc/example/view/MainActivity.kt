@@ -11,11 +11,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager2.widget.ViewPager2
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import by.lukashenko.mvc.example.R
 import by.lukashenko.mvc.example.controler.ControllerMainActivity
-import by.lukashenko.mvc.example.model.db.User
 import by.lukashenko.mvc.example.model.UserModel
+import by.lukashenko.mvc.example.model.db.User
 import by.lukashenko.mvc.example.view.adapter.UserListAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -43,8 +45,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun initView() {
         adapterUser = UserListAdapter()
         vpListUser.apply {
-            orientation = ViewPager2.ORIENTATION_VERTICAL
+            layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
             adapter = adapterUser
+            addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         }
     }
 

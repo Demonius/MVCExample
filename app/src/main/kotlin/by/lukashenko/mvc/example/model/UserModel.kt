@@ -11,8 +11,17 @@ import com.activeandroid.query.Select
 
 class UserModel() {
 
-    fun getAllUser(): List<User> = Select().from(User::class.java).execute()
-
+    fun getAllUser(): List<User> {
+        val listUser: List<User>
+        ActiveAndroid.beginTransaction()
+        try {
+            listUser = Select().from(User::class.java).execute()
+            ActiveAndroid.setTransactionSuccessful()
+        } finally {
+            ActiveAndroid.endTransaction()
+        }
+        return listUser
+    }
 
     fun deleteAllUser() {
         ActiveAndroid.beginTransaction()
