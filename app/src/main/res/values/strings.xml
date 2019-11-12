@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">User list</string>
+    <string name="app_name">MVCExample</string>
     <string name="action_clear">Clear</string>
     <string name="enter_name">Enter your name</string>
     <string name="enter_age">Enter age</string>
